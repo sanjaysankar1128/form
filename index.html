@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="Microsoft_Forms-Logo.wine.svg">
+</head>
+
+<body onload="buildTable()">
+    <h1>Form</h1>
+    <div class="validation">
+        <form class="form " id="form">
+            <div class="form-control">
+                <label for="names">Name</label><br>
+                <input id="names" type="text" placeholder="Enter your name">
+                <small id="error1"></small>
+            </div>
+            <div class="form-control">
+                <label for="number">Mobile Number</label><br>
+                <input id="number" type="number" placeholder="Enter 10 digit mobile number">
+                <small id="error2"></small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label><br>
+                <input id="email" type="email" placeholder="Enter your email">
+                <small id="error3"></small>
+            </div>
+
+            <div class="form-control">
+                <div>
+                    <lable for="gender" style=" font-size: 14px;
+                    color: #000;
+                    font-weight: 700;
+                    font-family: sans-serif;">Gender </lable><br>
+                    <input type="radio" value="Male" id="radio " name="Gender"> Male<br>
+                    <input type="radio" value="Female" id="radio " name="Gender"> Female<br>
+                    <input type="radio" value="Others" id="radio " name="Gender"> Others
+                </div>
+                <small id="error4"></small>
+            </div><br>
+            <div class="form-control" id="tbl">
+                <div>
+                    <lable style=" font-size: 14px;
+                    color: #000;
+                    font-weight: 700;
+                    font-family: sans-serif;">Select Language </lable><br>
+                    <input type="checkbox" id="Tamil " value="Tamil" name="checkbox"> Tamil<br>
+                    <input type="checkbox" id="English " value=" English" name="checkbox"> English<br>
+                    <input type="checkbox" id="Hindi " value="Hindi" name="checkbox"> Hindi<br>
+                    <input type="checkbox" id="Others " value="Others" name="checkbox"> Others<br>
+                </div>
+                <small id="error5"></small>
+            </div>
+            <div class="form-control">
+                <p style=" font-size: 14px;
+                color: #000;
+                font-weight: 700;
+                font-family: sans-serif;">Status</p>
+                <select id="status" name="status">
+                    <option value="" style=" font-size: 14px;
+                    color: #000;
+                    font-weight: 700;
+                    font-family: sans-serif;">Select status </option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select><br>
+                <small id="error6"></small>
+            </div>
+
+            <div class="form-control">
+                <label for="textarea">Address :</label><br>
+                <textarea id="textarea" rows="5" cols="60" style="  border: 1px solid #00cca0;"></textarea><br>
+                <small id="error7"></small>
+            </div><br>
+
+            <div>
+                <button class="button" type="submit">SUBMIT</button>
+
+                <botton class="button1" type="button" onclick="myfunction()">RESET</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="table">
+        <table id="show">
+            <thead>
+                <tr>
+                   
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Gender</th>
+                    <th>Language</th>
+                    <th>Address</th>
+
+                </tr>
+            </thead>
+            <tbody id="myTable"></tbody>
+        </table>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
